@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page avec Materialize</title>
+
+    <!-- CDN Materialize CSS v1.0.0 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Google Icons (utilisées par Materialize) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header avec logo et liens de navigation -->
+    <header>
+        <nav class="nav-wrapper blue">
+            <div class="container">
+                <a href="#" class="brand-logo">MonLogo</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Menu mobile -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Body avec des cartes de différentes tailles -->
+    <main class="container my-5">
+        <div class="row">
+
+            <!-- Carte pleine largeur -->
+            <div class="col s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/800x400" alt="Image Card 1">
+                        <span class="card-title">Grande Carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Ceci est une grande carte avec beaucoup d'espace. Vous pouvez afficher beaucoup de contenu
+                            ici.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte mi-largeur -->
+            <div class="col s12 m6">
+                <div class="card medium">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Image Card 2">
+                        <span class="card-title">Carte Moyenne</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Cette carte est un peu plus petite mais peut contenir du texte et des images.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Explorer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte petite -->
+            <div class="col s12 m6">
+                <div class="card small">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Image Card 3">
+                        <span class="card-title">Petite Carte</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Ceci est une petite carte avec une description courte et concise.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer simple -->
+    <footer class="page-footer blue">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    © 2024 Mon Site | Tous droits réservés
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Materialize pour le menu mobile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+
+</body>
+
+</html>

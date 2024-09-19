@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Création de Compte avec Materialize</title>
+
+    <!-- CDN Materialize CSS v1.0.0 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header avec Materialize -->
+    <header>
+        <nav class="nav-wrapper teal">
+            <div class="container">
+                <a href="#" class="brand-logo">Mon Site</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Menu pour mobile -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </header>
+
+    <!-- Section : Formulaire de création de compte -->
+    <section class="container my-5">
+        <h1>Création de compte</h1>
+        <form action="#" method="post">
+
+            <!-- Civilité (inputs radio) -->
+            <div class="input-field">
+                <p>Civilité :</p>
+                <p>
+                    <label>
+                        <input name="civilite" type="radio" value="Monsieur" />
+                        <span>Monsieur</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="civilite" type="radio" value="Madame" />
+                        <span>Madame</span>
+                    </label>
+                </p>
+            </div>
+
+            <!-- Prénom (input text) -->
+            <div class="input-field">
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="prenom">Prénom</label>
+            </div>
+
+            <!-- Nom (input text) -->
+            <div class="input-field">
+                <input type="text" id="nom" name="nom" required>
+                <label for="nom">Nom</label>
+            </div>
+
+            <!-- Adresse (input text) -->
+            <div class="input-field">
+                <input type="text" id="adresse" name="adresse" required>
+                <label for="adresse">Adresse</label>
+            </div>
+
+            <!-- Email (input email) -->
+            <div class="input-field">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Adresse email</label>
+            </div>
+
+            <!-- Mot de passe (input password) -->
+            <div class="input-field">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Mot de passe</label>
+            </div>
+
+            <!-- Validation du mot de passe (input password) -->
+            <div class="input-field">
+                <input type="password" id="password-confirm" name="password-confirm" required>
+                <label for="password-confirm">Confirmer le mot de passe</label>
+            </div>
+
+            <!-- Passions (checkboxes) -->
+            <div class="input-field">
+                <p>Passions :</p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="passions" value="Informatique" />
+                        <span>Informatique</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="passions" value="Voyages" />
+                        <span>Voyages</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="passions" value="Sport" />
+                        <span>Sport</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="passions" value="Lecture" />
+                        <span>Lecture</span>
+                    </label>
+                </p>
+            </div>
+
+            <!-- Bouton de validation -->
+            <button type="submit" class="btn teal">Valider</button>
+
+        </form>
+    </section>
+
+    <!-- Footer avec Materialize classes -->
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <ul>
+                        <li><a href="index.html" class="white-text">Accueil</a></li>
+                        <li><a href="index.html" class="white-text">Inscription</a></li>
+                        <li><a href="index.html" class="white-text">Connexion</a></li>
+                        <li><a href="index.html" class="white-text">Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                © 2024 Mon Site
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Materialize pour le menu mobile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>
